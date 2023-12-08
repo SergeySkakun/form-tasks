@@ -3,34 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <title>Form structure: Task 1</title>
-    <style>
-      body {
-        background-color: #fff;
-        color: #333;
-        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
-        padding: 1em;
-        margin: 0;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
+    <h1>Form structure: Task 1</h1>
     <form>
-      Name:
-      <input type="text" id="name" name="name" />
-
-      Age:
-      <input type="number" id="age" name="age" />
-
-      Comment:
-      <input type="text" id="comment" name="comment" />
-
-      Email:
-      <input type="email" id="email" name="email" />
+      <section>
+        <h2>Personal details</h2>
+        <fieldset>
+          <ul>
+            <li>
+              <label for="name">Name: </label>
+              <input type="text" id="name" name="name" />
+            </li>
+            <li>
+              <label for="age">Age: </label>
+              <input type="number" id="age" name="age" />
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+      <section>
+        <h2>Comment information</h2>
+        <fieldset>
+          <ul>
+            <li>
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="comment"></textarea>
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+      <button type="submit">Send message</button>
     </form>
   </body>
 </html>
