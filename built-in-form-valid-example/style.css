@@ -1,11 +1,38 @@
-input:invalid {
-    border: 2px dashed red;
+* {
+    box-sizing: border-box;
 }
 
-input:invalid:required {
-    background-image: linear-gradient(to right, lightgreen, pink);
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-input:valid {
-    border: 2px solid black;
-}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 10px;
+    padding: 20px;
+    width: 320px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font: 1em sans-serif;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea,
+  fieldset {
+    width: 100%;
+    border: 1px solid #333;
+  }
+
+  input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+
+  input:focus:invalid {
+    box-shadow: none;
+  }
