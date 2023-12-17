@@ -102,11 +102,23 @@
       <button type="submit">Submit</button>
     </form>
 
-    <form action="/handling-page" method="post">
-      <label for="new-email"
-        >I would like you to provide me with an email address:</label
-      >
-      <input type="email" id="new-email" name="new-email" />
+    <form
+      action="/handling-page"
+      method="post"
+      class="js-validation-form2"
+      novalidate
+    >
+      <label for="js-validation-form2__email">
+        <span>I would like you to provide me with an email address:</span>
+        <input
+          type="email"
+          id="js-validation-form2__email"
+          name="new-email"
+          required
+          minlength="8"
+        />
+        <span class="js-validation-form2__error" aria-live="polite"></span>
+      </label>
       <button>Submit</button>
     </form>
     <script src="./index.js"></script>
